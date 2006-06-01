@@ -8,6 +8,9 @@ SYNOPSIS
  my %url;
      tie %url, "Tie::TinyURL";
      
+ ## Explicitly set an HTTP timeout of 3 seconds
+     # tie %url, "Tie::TinyURL", "timeout" => 3;
+     
  my $tinyurl = $url{"http://www.bbc.co.uk"};
      my $url = $url{$tinyurl};
      print "$tinyurl => $url\n";
@@ -20,7 +23,7 @@ SEE ALSO
     WWW::Shorten::TinyURL, <http://www.tinyurl.com>
 
 VERSION
-    $Id: TinyURL.pm 512 2006-05-28 22:34:11Z nicolaw $
+    $Id: TinyURL.pm 566 2006-06-01 18:38:40Z nicolaw $
 
 AUTHOR
     Nicola Worthington <nicolaw@cpan.org>
